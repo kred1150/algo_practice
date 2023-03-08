@@ -8,7 +8,7 @@
 
 def total_menu(hash)
   total_cost = 0
-  hash.each do |item, price|
+  hash.each do |_item, price|
     total_cost = total_cost + price.to_i
   end
   return total_cost
