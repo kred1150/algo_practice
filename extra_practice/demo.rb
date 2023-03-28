@@ -261,3 +261,12 @@ data[:courses][0][:books].each do |book|
   p book[:pages]
 end
 # // Demo: Use a loop to print out all books authored by Eduardo Plusman
+i = 0
+while i < data[:courses].length
+  data[:courses][i][:books].each do |book|
+    if book[:author] == "Eduardo Plusman"
+      p book[:title]
+    end
+  end
+  i += 1
+end
