@@ -256,6 +256,8 @@ data = {
 
 # // Demo: Print out the page count of the book "World History"
 p data[:courses][2][:books][0][:pages]
-
 # // Demo: Use a loop to print out page count of Math 101 books
+data[:courses][0][:books].each do |book|
+  p book[:pages]
+end
 # // Demo: Use a loop to print out all books authored by Eduardo Plusman
