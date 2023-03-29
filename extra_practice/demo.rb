@@ -270,3 +270,13 @@ while i < data[:courses].length
   end
   i += 1
 end
+
+# // "Simple" Exercises:
+# // 1. Print out the name of the teacher of Computers 101
+p data[:courses][1][:teacher]
+# // 2. Print out Grace Hopper's id
+p data[:courses][0][:students][2][:id]
+# // 3. Print out the last name of Emily who takes Chemistry
+p data[:courses][3][:students][4][:lastname]
+# // 4. Print out the grade that Sarah Wald received in Computers 101
+p data[:courses][1][:students][4][:grade]
