@@ -280,3 +280,34 @@ p data[:courses][0][:students][2][:id]
 p data[:courses][3][:students][4][:lastname]
 # // 4. Print out the grade that Sarah Wald received in Computers 101
 p data[:courses][1][:students][4][:grade]
+
+# // "Loop" Exercises:
+p "---------------------------------------"
+# // 5. Use a loop to print out all of the times that Chemistry takes place
+data[:courses][3][:times].each do |time|
+  p time
+end
+# // 6. Use a loop to print out all of the course titles
+data[:courses].each do |course|
+  p course[:title]
+end
+# // 7. Use a loop to print out all of the full names of students taking World History (an example full name is: "Rena Cohen")
+data[:courses][2][:students].each do |student|
+  p student[:firstname] + " " + student[:lastname]
+end
+# // 8. Use a loop to print out all of the people who received an "A" in Math 101
+data[:courses][0][:students].each do |student|
+  if student[:grade] == "A"
+    p student[:firstname] + " " + student[:lastname]
+  end
+end
+# // 9. Use a loop to print out all of Shana Cohen's grades
+i = 0
+while i < data[:courses].length
+  data[:courses][i][:students].each do |student|
+    if student[:firstname] + " " + student[:lastname] == "Shana Cohen"
+      p student[:firstname] + " " + student[:lastname] + ": " + student[:grade]
+    end
+  end
+  i += 1
+end
