@@ -1,9 +1,6 @@
-# Write a function that returns the reverse of a given string.
+# Write a Ruby function to reverse a string. Demonstrate it with the string “Madam, I’m Adam”.
 
-# Input: “abcde”
-# Output: “edcba”
-
-string = "abcde"
+string = "Madam, I’m Adam"
 
 def reverse(string)
   i = string.length - 1
