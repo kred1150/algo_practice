@@ -34,7 +34,7 @@ def is_valid_sudoku(board)
     sub_i = 0
     while sub_i < board[i].length
       if board[i][sub_i] == "."
-        "not filled in"
+        ""
       elsif row.include?(board[i][sub_i]) == true
         return false
       elsif sudoku_hash[sub_i] && sudoku_hash[sub_i].include?(board[i][sub_i]) == true
