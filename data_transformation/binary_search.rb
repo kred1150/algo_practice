@@ -15,3 +15,5 @@ def binary_search(array, n)
     middle = i + j / 2
   end
 end
+
+p binary_search([-1, 0, 3, 5, 9, 12], 9)
